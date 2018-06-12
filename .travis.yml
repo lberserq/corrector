@@ -1,10 +1,19 @@
 language: cpp
-install: make get-deps cmake libboost-all-dev libgtest-dev
 dist: trusty
+addons:
+  apt:
+    packages: 
+     - libboost-all-dev
+     - libgtest-dev
+     - cmake
 compiler:
   - clang
   - gcc
-script: cmake
+script: 
+  - mkdir -p build
+  - cd build
+  - cmake ..
+  - make
 before_install:
   - test -n $CC  && unset CC
   - test -n $CXX && unset CXX
