@@ -1,7 +1,7 @@
 language: cpp
-dist: bionic
+dist: xenial
 cache: False
-sudo: required
+sudo: False
 addons:
   apt:
     packages: 
