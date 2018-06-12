@@ -1,6 +1,7 @@
 language: cpp
 dist: bionic
 cache: False
+sudo: required
 addons:
   apt:
     packages: 
