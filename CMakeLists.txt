@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.0)
+project(spell_checker C CXX)
+find_package("Boost" REQUIRED COMPONENTS "system" "filesystem")
+find_package("GTest" REQUIRED)
+include_directories("${Boost_INCLUDE_DIRS}" "${GTEST_INCLUDE_DIRS}" "include")
+subdirs(${spell_checker_SOURCE_DIR}/src ${spell_checker_SOURCE_DIR}/test)
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -std=c++14 -g -O0 -Wall -Wextra -Werror -ggdb")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -std=c++14 -g -Wall -Wextra -Werror -ggdb")
