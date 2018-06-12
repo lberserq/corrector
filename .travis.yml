@@ -1,0 +1,10 @@
+language: cpp
+install: make get-deps cmake libboost-all-dev libgtest-dev
+dist: trusty
+compiler:
+  - clang
+  - gcc
+script: cmake
+before_install:
+  - test -n $CC  && unset CC
+  - test -n $CXX && unset CXX
