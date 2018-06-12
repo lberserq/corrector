@@ -1,5 +1,6 @@
 language: cpp
 dist: bionic
+cache: False
 addons:
   apt:
     packages: 
