@@ -11,7 +11,15 @@ compiler:
   - clang
   - gcc
 script: 
-  - mkdir build_gtest && cd build_gtest && cmake /usr/src/gtest && make && sudo make install
+  - mkdir build_gtest
+  - cd build_gtest
+  - cmake /usr/src/gtest && make
+  - sudo make
+  - sudo cp *.a /usr/lib
+  - sudo mkdir -p /usr/local/lib/gtest
+  - sudo ln -s /usr/lib/libgtest.a /usr/local/lib/gtest/libgtest.a
+  - sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/gtest/libgtest_main.a
+  - cd ..
   - mkdir -p build
   - cd build
   - cmake ..
