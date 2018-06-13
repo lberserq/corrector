@@ -4,7 +4,8 @@ cache: False
 addons:
   apt:
     packages: 
-     - libboost-all-dev
+     - libboost-filesystem-dev
+     - libboost-system-dev
      - libgtest-dev
      - cmake
 compiler:
