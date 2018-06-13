@@ -30,7 +30,7 @@ namespace
                     std::codecvt_utf8_utf16<char16_t>, char16_t>{}.from_bytes(rawData);
 
             constexpr string_t::value_type delim = u'-';
-            std::transform(data.begin(), data.end(), data.begin(), [delim](char16_t inChar) {
+            std::transform(data.begin(), data.end(), data.begin(), [=](char16_t inChar) {
                 //some generic hacks, Ideal impl should be done with locale
                 static const string_t ff = u"1234567890|-+/*=!?%.,;:~^@$&#_()[]{}<>«»'\" \t\r\n";
                 if (std::find(ff.begin(), ff.end(), inChar) == ff.end()) {

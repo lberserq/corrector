@@ -72,7 +72,7 @@ TEST_F(EnRuTestFixture, CorrectorCorrectWord)
 }
 
 
-TEST_F(CorrectorFixture, CorrectorProhibitAddExistingLanguage)
+TEST_F(EnTestFixture, CorrectorProhibitAddExistingLanguage)
 {
     auto &corrector = GetCorrector();
 

@@ -1,5 +1,5 @@
 #ifndef src_spell_checker_impl_h__
-#define src_spell_checker_impl_h_
+#define src_spell_checker_impl_h__
 #include "iface/spell_checker.h"
 
 #include <locale>
